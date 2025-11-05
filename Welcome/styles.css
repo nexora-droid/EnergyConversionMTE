@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-color: #f8f9fa;
+    --primary: #2b6cb0;
+    --primary-hover: #2c5282;
+    --text: #1a202c;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
 #bulbimg{
     width: 100px;
     height: 100px;
@@ -8,37 +23,64 @@
 #maincontainer{
     padding: 10px;
 }
-#nav{
+#nav {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-    background-color: rgba(117, 170, 255, 0.5);
+    background-color: white;
     margin-left: -9px;
     margin-right: -9px;
     margin-top: -9px;
-    height: 50px;
+    height: 60px;
     align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-.navurl{
+
+.navurl {
     text-decoration: none;
-    color: black;
+    color: var(--text);
+    font-weight: 500;
     position: relative;
     cursor: pointer;
-    padding-bottom: 4px;
+    font-size: 0.95rem;
 }
 
-.navurl::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -3px;
-    left: 0;
-    background-color: red;
-    transition: width 0.3s ease-in-out;
+.navpart {
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
 }
 
-.navurl:hover::after {
-    width: 100%;
-    align-items: center;
-} 
+.navpart:hover {
+    background: rgba(43, 108, 176, 0.1);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.text{
+    font-family: 'Noto Sans', sans-serif;
+}
+#mtehead{
+    font-family: 'Noto Sans', sans-serif;
+}
+button{
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start {
+    background-color: var(--primary);
+    transition: background-color 0.2s ease;
+}
+
+#start:hover {
+    background-color: var(--primary-hover);
+}
