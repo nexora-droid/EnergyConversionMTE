@@ -40,6 +40,27 @@ body{
     box-sizing: border-box;
 }
 
+#mainnav{
+     display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 60px;
+    align-items: center;
+    padding: 0 2rem;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+#navtitle{
+    font-weight: 600;
+    color: var(--text);
+}
 .navurl {
     text-decoration: none;
     color: var(--text);
@@ -68,6 +89,7 @@ body{
 }
 #mtehead{
     font-family: 'Noto Sans', sans-serif;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 button{
     font-family: 'Noto Sans', sans-serif;
@@ -81,9 +103,19 @@ button{
 
 #start {
     background-color: var(--primary);
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
+    border-radius: 64px;
+    box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.2);
 }
 
 #start:hover {
     background-color: var(--primary-hover);
+    box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.2);
+}
+#hero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
