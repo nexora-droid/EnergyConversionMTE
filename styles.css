@@ -1,0 +1,10 @@
+#bulbimg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 100px;
+    object-position: 100% 50%;
+}
+#maincontainer{
+    padding: 10px;
+}
