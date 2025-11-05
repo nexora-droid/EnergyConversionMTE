@@ -8,3 +8,37 @@
 #maincontainer{
     padding: 10px;
 }
+#nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: rgba(117, 170, 255, 0.5);
+    margin-left: -9px;
+    margin-right: -9px;
+    margin-top: -9px;
+    height: 50px;
+    align-items: center;
+}
+.navurl{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 4px;
+}
+
+.navurl::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: red;
+    transition: width 0.3s ease-in-out;
+}
+
+.navurl:hover::after {
+    width: 100%;
+    align-items: center;
+} 
