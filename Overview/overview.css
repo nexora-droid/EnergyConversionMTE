@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+:root {
+    --bg-color: #f8f9fa;
+    --primary: #2b6cb0;
+    --primary-hover: #2c5282;
+    --text: #1a202c;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+#bulbimg{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100px;
+    object-position: 100% 50%;
+}
+#maincontainer{
+    padding: 10px;
+}
+#nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: white;
+    /*margin-left: -9px;
+    margin-right: -9px;
+    margin-top: -9px;*/
+    height: 60px;
+    align-items: center;
+    padding: 0 2rem;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+#mainnav{
+     display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 60px;
+    align-items: center;
+    padding: 0 2rem;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+#navtitle{
+    font-weight: 600;
+    color: var(--text);
+}
+.navurl {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.navpart {
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.navpart:hover {
+    background: rgba(43, 108, 176, 0.1);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.text{
+    font-family: 'Noto Sans', sans-serif;
+}
+#mtehead{
+    font-family: 'Momo Trust Display', sans-serif;
+    font-size: 100px;
+}
+button{
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start {
+    background-color: var(--primary);
+    transition: all 0.2s ease;
+    border-radius: 64px;
+    box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.2);
+    font-size: large;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+}
+
+#start:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.2);
+}
+#hero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
