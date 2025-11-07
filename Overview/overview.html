@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=`, initial-scale=1.0">
     <title>MTE Conversion Overview</title>
     <link rel="stylesheet" href="./overview.css">
-</head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
 <body>
     <nav id="mainnav">
         <div id="navtitle">MTE Overview</div>
-        <div class="nav-links">
-            <a href="index.html" class="navurl navpart">Welcome</a>
-            <a href="../Overview/overview.html" class="navurl navpart">Overview of Experiment</a>
-            <a href="../Simulation/simulation.html" class="navurl navpart">Simulation</a>
-            <a href="../Photos/photos.html" class="navurl navpart">Photos</a>
+        <div id="hamburger">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+        <div class="side-menu" id="sidemenu">
+            <div class="nav-links">
+                <span class="material-symbols-outlined" id="closeMenu">close</span>
+                <a href="../Welcome/index.html" class="navurl navpart">Welcome</a>
+                <a href="../Overview/overview.html" class="navurl navpart">Overview of Experiment</a>
+                <a href="../Simulation/simulation.html" class="navurl navpart">Simulation</a>
+                <a href="../Photos/photos.html" class="navurl navpart">Photos</a>
+            </div>
         </div>
     </nav>
     <div id="maincontainer">
@@ -21,8 +28,8 @@
         <!--Start of page-->
         <div id="hero">
             <h1 id="mtehead">Overview</h1>
-            <!--<p class="text">This page provides an in-depth understanding of <abbr title="Mechanical to Electric">MTE</abbr> or <i>Mechanical to Electric Conversion</i></p>-->
-            <!-- NEED MAKE THIS GO TO #BODY <a href=""><button id="start">Get started!</button></a> -->
+            <span class="material-symbols-outlined" id="arrow">arrow_downward</span> 
+            
         </div>
     </div>
     <script src="./overview.js"></script>

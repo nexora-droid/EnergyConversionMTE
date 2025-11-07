@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
 :root {
     --bg-color: #f8f9fa;
     --primary: #2b6cb0;
@@ -88,7 +88,7 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 #mtehead{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Momo Trust Display', sans-serif;
 }
 button{
     font-family: 'Noto Sans', sans-serif;
@@ -109,6 +109,7 @@ button{
     font-weight: 600;
     width: 150px;
     height: 50px;
+    animation: button 1s infinite;
 }
 
 #start:hover {
@@ -121,4 +122,9 @@ button{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+@keyframes button {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
