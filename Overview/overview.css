@@ -149,11 +149,15 @@ button{
     width: 25%;
     background-color: white;
     box-shadow: -4px 0 8px rgba(0,0,0,0.1);
-    transition: right 0.35s ease-in-out;
+    transition: right 0.4s ease-in-out;
     z-index: 1000;
     display: flex;
     flex-direction: column;
     padding: 2.5rem 1.5rem;
+}
+.side-menu ~ #hamburger,
+.side-menu + #hamburger{
+    display: none;
 }
 .side-menu .nav-links{
     display: flex;
@@ -180,8 +184,14 @@ button{
     color: var(--text);
     transition: color 0.2s ease;
 }
+.side-menu.active #closeMenu{
+    display: block;
+}
 #closeMenu:hover{
     color: var(--primary);
+}
+#closeMenu{
+    display: none;
 }
 .side-menu.active{
     right: 0;
