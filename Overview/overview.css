@@ -42,7 +42,7 @@ body{
 }
 
 #mainnav{
-     display: flex;
+    display: flex;
     justify-content: space-between;
     background-color: white;
     height: 60px;
@@ -103,21 +103,6 @@ button{
     cursor: pointer;
 }
 
-#start {
-    background-color: var(--primary);
-    transition: all 0.2s ease;
-    border-radius: 64px;
-    box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.2);
-    font-size: large;
-    font-weight: 600;
-    width: 150px;
-    height: 50px;
-}
-
-#start:hover {
-    background-color: var(--primary-hover);
-    box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.2);
-}
 #hero{
     position: absolute;
     top: 50%;
@@ -134,88 +119,88 @@ button{
     50% { transform: translateY(5px); }
     100% { transform: translateY(-5px); }
 }
-#hamburger{
-    display: flex;
+#hamburger{ 
+    display: flex; 
     align-items: center;
-    cursor: pointer;
-    font-size: 32px;
-    color: var(--text);
-    z-index: 1001;
-}
-.side-menu{
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 25%;
-    background-color: white;
-    box-shadow: -4px 0 8px rgba(0,0,0,0.1);
-    transition: right 0.4s ease-in-out;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    padding: 2.5rem 1.5rem;
-}
+    cursor: pointer; 
+    font-size: 32px; 
+    color: var(--text); 
+    z-index: 1001; 
+} 
+.side-menu{ 
+    position: fixed; 
+    top: 0; 
+    right: calc(-25% - 3rem); 
+    height: 100vh; 
+    width: 25%; 
+    background-color: white; 
+    box-shadow: -4px 0 8px rgba(0,0,0,0.1); 
+    transition: right 0.4s ease-in-out; 
+    z-index: 1000; 
+    display: flex; 
+    flex-direction: column; 
+    padding: 2.5rem 1.5rem; 
+} 
 .side-menu ~ #hamburger,
-.side-menu + #hamburger{
-    display: none;
+.side-menu + #hamburger{ 
+    display: none; 
 }
-.side-menu .nav-links{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 3.5rem;
+.side-menu .nav-links{ 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.5rem; 
+    margin-top: 3.5rem; 
     align-items: flex-start;
-}
-.side-menu .navurl{
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 500;
-    font-size: 1.5rem;
-}
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+} 
+.side-menu .navurl{ 
+    text-decoration: none; 
+    color: var(--text); 
+    font-weight: 500; 
+    font-size: 1.5rem; 
+} 
 .side-menu .navurl:hover{
-    color: var(--primary);
-    background: rgba(43, 108, 176, 0.1);
-}
-#closeMenu{
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 32px;
-    cursor: pointer;
-    color: var(--text);
-    transition: color 0.2s ease;
-}
-.side-menu.active #closeMenu{
-    display: block;
-}
-#closeMenu:hover{
-    color: var(--primary);
-}
-#closeMenu{
-    display: none;
-}
-.side-menu.active{
-    right: 0;
-}
-@media (max-width: 768px){
-    .side-menu{
-        width: 100%;
-    }
-}
-#overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-}
-#overlay.active{
-    opacity: 1;
-    visibility: visible;
+    color: var(--primary); 
+    background: rgba(43, 108, 176, 0.1); 
+} 
+#closeMenu{ 
+    position: absolute; 
+    top: 20px; 
+    right: 25px; 
+    font-size: 32px; 
+    cursor: pointer; 
+    color: var(--text); 
+    transition: color 0.2s ease; 
+} 
+.side-menu.active #closeMenu{ 
+    display: block; 
+} #closeMenu:hover{ 
+    color: var(--primary); 
+} #closeMenu{ 
+    display: none; 
+} .side-menu.active{ 
+    right: 0; 
+} @media (max-width: 768px){
+    .side-menu{ 
+        width: 100%; 
+        right: -100%;
+        padding: 3.5rem 1.5rem;
+        box-sizing: border-box;
+    } 
+} #overlay{ 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.1); 
+    z-index: 999; 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.2s ease; 
+} #overlay.active{ 
+    opacity: 1; 
+    visibility: visible; 
 }
