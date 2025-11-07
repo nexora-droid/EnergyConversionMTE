@@ -15,7 +15,7 @@ function closeMenuFunc(){
     overlay.classList.remove('active');
     setTimeout(() => {
         hamburger.style.display = 'flex';
-    }, 100);
+    }, 350);
 }
 hamburger.addEventListener('click', openMenu);
 closeMenu.addEventListener('click', closeMenuFunc);
