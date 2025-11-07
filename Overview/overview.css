@@ -176,13 +176,17 @@ button{
 } 
 .side-menu.active #closeMenu{ 
     display: block; 
-} #closeMenu:hover{ 
+} 
+#closeMenu:hover{ 
     color: var(--primary); 
-} #closeMenu{ 
+} 
+#closeMenu{ 
     display: none; 
-} .side-menu.active{ 
+} 
+.side-menu.active{ 
     right: 0; 
-} @media (max-width: 768px){
+} 
+@media (max-width: 768px){
     .side-menu{ 
         width: 100%; 
         right: -100%;
