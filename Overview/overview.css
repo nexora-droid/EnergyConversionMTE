@@ -15,11 +15,13 @@ body{
     padding: 0;
 }
 #bulbimg{
-    width: 150px;
-    height: 150px;
+    width: 368px;
+    height: 368px;
     object-fit: cover;
     border-radius: 100px;
     object-position: 100% 50%;
+    rotate: -11.66deg;
+    margin-left: 66px;
 }
 #maincontainer{
     padding: 10px;
@@ -86,9 +88,6 @@ body{
     border: 1px solid var(--primary);
 }
 
-.text{
-    font-family: 'Noto Sans', sans-serif;
-}
 #mtehead{
     font-family: 'Momo Trust Display', sans-serif;
     font-size: 100px;
@@ -126,11 +125,12 @@ button{
     font-size: 32px; 
     color: var(--text); 
     z-index: 1001; 
+    position: relative;
 } 
 .side-menu{ 
     position: fixed; 
     top: 0; 
-    right: calc(-25% - 3rem); 
+    right: -100%; 
     height: 100vh; 
     width: 25%; 
     background-color: white; 
@@ -141,6 +141,15 @@ button{
     flex-direction: column; 
     padding: 2.5rem 1.5rem; 
 } 
+@media (min-width: 769px){
+    .side-menu {
+        right: calc(-25% - 3rem);
+        width: 25%;
+        top: 0;
+        height: 100vh;
+    }
+}
+
 .side-menu ~ #hamburger,
 .side-menu + #hamburger{ 
     display: none; 
@@ -174,6 +183,9 @@ button{
     color: var(--text); 
     transition: color 0.2s ease; 
 } 
+.side-menu.active{
+    right: 0;
+}
 .side-menu.active #closeMenu{ 
     display: block; 
 } 
@@ -207,4 +219,52 @@ button{
 } #overlay.active{ 
     opacity: 1; 
     visibility: visible; 
+}
+#intro{
+    margin-top:1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 100px;
+    flex-wrap: nowrap;
+}
+#introtext{
+    font-family: 'Momo Trust Display', sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 770px;
+    box-sizing: border-box;
+}
+#introtext p{
+    text-align: right;
+    margin-left: auto;
+    max-width: 50ch;
+    text-align: justify;
+    margin: 0;
+}
+#introtext h1{
+    text-align: left;
+}
+.text{
+    font-family: 'Noto Sans', sans-serif;
+}
+@media (max-width:768px) {
+    #intro{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+    #introtext{
+        max-width: 100%;
+        text-align: center;
+    }
+    #bulbimg{
+        margin-left: 0;
+        rotate: 0deg;
+    }
 }
