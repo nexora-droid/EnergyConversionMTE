@@ -127,6 +127,9 @@ button{
     z-index: 1001; 
     position: relative;
 } 
+#hamburger.hidden{
+    display: none !important;
+}
 .side-menu{ 
     position: fixed; 
     top: 0; 
@@ -143,17 +146,13 @@ button{
 } 
 @media (min-width: 769px){
     .side-menu {
-        right: calc(-25% - 3rem);
+        right: -100%;
         width: 25%;
         top: 0;
         height: 100vh;
     }
 }
 
-.side-menu ~ #hamburger,
-.side-menu + #hamburger{ 
-    display: none; 
-}
 .side-menu .nav-links{ 
     display: flex; 
     flex-direction: column; 
@@ -198,14 +197,7 @@ button{
 .side-menu.active{ 
     right: 0; 
 } 
-@media (max-width: 768px){
-    .side-menu{ 
-        width: 100%; 
-        right: -100%;
-        padding: 3.5rem 1.5rem;
-        box-sizing: border-box;
-    } 
-} #overlay{ 
+#overlay{ 
     position: fixed; 
     top: 0; 
     left: 0; 
@@ -266,5 +258,11 @@ button{
     #bulbimg{
         margin-left: 0;
         rotate: 0deg;
+    }
+    .side-menu{ 
+        width: 100%; 
+        right: -100%;
+        padding: 3.5rem 1.5rem;
+        box-sizing: border-box;
     }
 }
