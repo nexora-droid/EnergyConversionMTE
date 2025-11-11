@@ -6,22 +6,13 @@
     --primary: #2b6cb0;
     --primary-hover: #2c5282;
     --text: #1a202c;
+    --textsize: 100px;
 }
-
 body{
     font-family: 'Noto Sans', sans-serif;
     background-color: var(--bg-color);
     margin: 0;
     padding: 0;
-}
-#bulbimg{
-    width: 368px;
-    height: 368px;
-    object-fit: cover;
-    border-radius: 100px;
-    object-position: 100% 50%;
-    rotate: -11.66deg;
-    margin-left: 66px;
 }
 #maincontainer{
     padding: 10px;
@@ -187,7 +178,7 @@ button{
 }
 .side-menu.active #closeMenu{ 
     display: block; 
-} 
+}
 #closeMenu:hover{ 
     color: var(--primary); 
 } 
@@ -208,17 +199,43 @@ button{
     opacity: 0; 
     visibility: hidden; 
     transition: opacity 0.2s ease; 
-} #overlay.active{ 
+} 
+#overlay.active{ 
     opacity: 1; 
     visibility: visible; 
+}
+#bulbimg{
+    width: 368px;
+    height: 368px;
+    object-fit: cover;
+    border-radius: 100px;
+    object-position: 100% 50%;
+    rotate: 0deg;
+    margin-bottom: 30px;
+}
+.animimg{
+    opacity: 0;
+    transform: translateY(100px) rotate(0deg);
+    transition: opacity 500ms ease-out, transform 1500ms ease-out;
+}
+.animimg.scrolled {
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg);
+}
+@keyframes idle{
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
 #intro{
     margin-top:1000px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 100px;
     flex-wrap: nowrap;
+    padding: 0 66px;
 }
 #introtext{
     font-family: 'Momo Trust Display', sans-serif;
@@ -228,6 +245,7 @@ button{
     width: 100%;
     max-width: 770px;
     box-sizing: border-box;
+    margin-top: -75px;
 }
 #introtext p{
     text-align: right;
@@ -235,6 +253,7 @@ button{
     max-width: 50ch;
     text-align: justify;
     margin: 0;
+    margin-left: 40px;
 }
 #introtext h1{
     text-align: left;
@@ -249,7 +268,7 @@ button{
         gap: 30px;
         margin-left: 20px;
         margin-right: 20px;
-
+        padding: 0;
     }
     #introtext{
         max-width: 100%;
@@ -265,4 +284,45 @@ button{
         padding: 3.5rem 1.5rem;
         box-sizing: border-box;
     }
+}
+table{
+    font-family: 'Noto Sans', sans-serif;
+    border-collapse: collapse;
+    width: 1000px;
+}
+td, th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+}
+th{
+    font-family: 'Momo Trust Display', sans-serif;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#infosheet{
+    margin-top: 200px;
+}
+#infohead{
+    font-family: 'Momo Trust Display', sans-serif;
+    font-size: 40px;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#container div {
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  flex: 1;
+  min-width: auto;
+}
+#tabletext{
+    font-size: 25px;
 }
