@@ -288,11 +288,12 @@ button{
 table{
     font-family: 'Noto Sans', sans-serif;
     border-collapse: collapse;
-    width: 1000px;
+    width: 700px;
+    margin-left: 150px;
 }
 td, th{
-    border: 1px solid #dddddd;
-    text-align: left;
+    border: 0px;
+    text-align: center;
     padding: 8px;
     font-size: 20px;
 }
@@ -302,12 +303,16 @@ th{
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+tr:nth-child(odd){
+    background-color: #eeeeee;
+}
 #infosheet{
     margin-top: 200px;
 }
 #infohead{
     font-family: 'Momo Trust Display', sans-serif;
     font-size: 40px;
+    margin-left: 100px;
 }
 #container{
     display: flex;
@@ -325,4 +330,6 @@ tr:nth-child(even) {
 }
 #tabletext{
     font-size: 25px;
+    max-width: 350px;
+    text-align: justify;
 }
