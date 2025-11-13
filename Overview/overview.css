@@ -333,3 +333,77 @@ tr:nth-child(odd){
     max-width: 350px;
     text-align: justify;
 }
+#objectives{
+    margin-top: 150px;
+    display: flex !important;
+    flex-direction: row-reverse Imp !important;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: nowrap;
+    padding: 0 66px;
+}  
+#objectivestext{
+    font-family: 'Momo Trust Display', sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 770px;
+    box-sizing: border-box;
+}
+#objectivestext ul{
+    text-align: left;
+    margin: 0;
+    padding-left: 40px;
+}
+#targetimg{
+    width: 368px;
+    height: 368px;
+    object-fit: cover;
+    border-radius: 100px;
+    object-position: 100% 50%;
+    rotate: 23.32deg;
+}
+
+#materials{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: nowrap;
+    padding: 0 66px;
+}  
+#materialstext{
+    font-family: 'Momo Trust Display', sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 770px;
+    box-sizing: border-box;
+}
+#materialstext ul{
+    text-align: left;
+    margin: 0;
+    padding-left: 40px;
+}
+#materialimg{
+    width: 368px;
+    height: 368px;
+    object-fit: cover;
+    border-radius: 100px;
+    object-position: 100% 50%;
+    rotate: 23.32deg;
+}
+#gearimg{
+    margin-top: 30px;
+    width: 368px;
+    height: 368px;
+    object-fit: cover;
+    border-radius: 100px;
+    object-position: 100% 50%;
+    rotate: 0deg;
+}
