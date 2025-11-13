@@ -29,10 +29,15 @@
         <h2>Energy Conversion Simulation</h2>
 
         <div id="sim-container">
+            <canvas id="sim-canvas" width="600" height="400"></canvas>
             <div id="buttons">
-                <button class="sim-button" data-type:"electric">Mechanical -> Electrical </button>
-                <button class="sim-button" data-type:"thermal">Mechanical -> Thermal </button>
-                <button class="sim-button" data-type:"kinetic">Mechanical -> Kinetic </button>
+                <button class="sim-button" data-type="electric">Mechanical -> Electrical </button>
+                <button class="sim-button" data-type="thermal">Mechanical -> Thermal </button>
+                <button class="sim-button" data-type="kinetic">Mechanical -> Kinetic </button>
+            </div>
+            <div id="controls">
+                <label for="speedSlider">Gear Speed</label>
+                <input type="range" id="speedSlider" min="1" max="10" value="5">
             </div>
         </div>
         
