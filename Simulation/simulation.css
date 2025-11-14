@@ -40,6 +40,11 @@ body{
     width: 100%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 .nav-links {
     display: flex;
@@ -208,4 +213,25 @@ canvas{
     margin: 0 auto;
     border-radius: 10px;
     background-color: #000;
+}
+#phoneoverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: none;
+    z-index: 3000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+#overlaytext{
+    color: white;
+    font-family: 'Momo Trust Display', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
 }

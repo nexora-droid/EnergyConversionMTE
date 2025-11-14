@@ -131,7 +131,7 @@ function drawOutput(){
        ctx.fill();
 
        ctx.globalAlpha = 1;
-       
+
     } else if (mode == "thermal") {
         for (let i = 0; i < 5; i++){
             ctx.beginPath();
@@ -154,3 +154,14 @@ function drawOutput(){
         ctx.restore();
     }
 }
+/*Mobile simulation switch to landscape or larger device checker*/
+function checkOrientation(){
+    const overlay = document.getElementById('phoneoverlay');
+    if (window.innerWidth < 1024 && window.innerHeight > window.innerWidth){
+        overlay.style.display = 'flex';
+    } else {
+        overlay.style.display = 'none';
+    }
+}
+window.addEventListener('resize', checkOrientation);
+window.addEventListener('load', checkOrientation);
