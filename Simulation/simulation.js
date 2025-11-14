@@ -124,12 +124,14 @@ function drawOutput(){
         ctx.strokeStyle = "#fff";
         ctx.stroke();
 
-        if (gearSpeed > 6) {
-            ctx.fillStyle = "yellow";
-            ctx.globalAlpha = 0.3;
-            ctx.fill();
-            ctx.globalAlpha = 1;
-        }
+       let alpha = gearSpeed / 10;
+       ctx.globalAlpha = alpha;
+
+       ctx.fillStyle = "yellow";
+       ctx.fill();
+
+       ctx.globalAlpha = 1;
+       
     } else if (mode == "thermal") {
         for (let i = 0; i < 5; i++){
             ctx.beginPath();
