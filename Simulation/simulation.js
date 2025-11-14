@@ -86,7 +86,7 @@ function drawGear(x, y, radius) {
     ctx.rotate(gearAngle);
 
     ctx.beginPath();
-    ctx.arc(0, 0, 0.8 * radius, 0, Math.PI * 2);
+    ctx.arc(0, 0, radius, 0, Math.PI * 2);
     ctx.fillStyle = '#222';
     ctx.fill();
     ctx.strokeStyle = "#444";
@@ -94,15 +94,14 @@ function drawGear(x, y, radius) {
     ctx.stroke();
     
     const teeth = 12;
+    const toothLength = 12;
+    const toothWidth = 30;
     for (let i = 0; i < teeth; i++) {
         const a = (i/teeth) * Math.PI * 2;
-        const tx = Math.cos(a) * radius;
-        const ty = Math.cos(a) * radius;
         ctx.save();
-        ctx.translate(tx, ty);
         ctx.rotate(a);
         ctx.fillStyle = "#333";
-        ctx.fillRect(-6, -6, 12, 12);
+        ctx.fillRect(-toothWidth/2, radius - 1, toothWidth, toothLength);
         ctx.restore();
     }
 
@@ -132,10 +131,10 @@ function drawOutput(){
             ctx.globalAlpha = 1;
         }
     } else if (mode == "thermal") {
-        ctx.fillStyle("orange");
+        ctx.fillStyle = "orange";
         ctx.beginPath();
         ctx.ellipse(x, y, 30, 60, 0, 0, Math.PI * 2);
-        ctx.fil();
+        ctx.fill();
     } else if (mode == "kinetic"){
         ctx.save();
         ctx.translate(x,y);
