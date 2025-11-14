@@ -35,6 +35,22 @@ let gearSpeed = "5";
 let gearAngle = 0;
 let animationId;
 
+function startAnimation(){
+    cancelAnimationFrame(animationId);
+    function animate(){
+        clear();
+
+        gearAngle += gearSpeed * 0.03;
+        
+        drawGear(300, 300, 100);
+        drawWire();
+
+        if (mode) drawOutput();
+
+        animationId = requestAnimationFrame(animate);
+    }
+    animate();
+}
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
