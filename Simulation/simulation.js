@@ -131,10 +131,15 @@ function drawOutput(){
             ctx.globalAlpha = 1;
         }
     } else if (mode == "thermal") {
-        ctx.fillStyle = "orange";
-        ctx.beginPath();
-        ctx.ellipse(x, y, 30, 60, 0, 0, Math.PI * 2);
-        ctx.fill();
+        for (let i = 0; i < 5; i++){
+            ctx.beginPath();
+            let size = 10 + gearSpeed * 2 + Math.random() * 10;
+            ctx.globalAlpha = 0.2 + Math.random() * 0.3;
+            ctx.fillStyle = "orange";
+            ctx.ellipse(x+Math.random() * 20 - 10, y - Math.random() * 30, 15, size, 0, 0, Math.PI*2);
+            ctx.fill();
+        }
+        ctx.globalAlpha = 1;
     } else if (mode == "kinetic"){
         ctx.save();
         ctx.translate(x,y);
