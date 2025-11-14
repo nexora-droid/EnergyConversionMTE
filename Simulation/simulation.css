@@ -11,7 +11,7 @@
 body{
     font-family: 'Noto Sans', sans-serif;
     background-color: var(--bg-color);
-    margin: 0;
+    margin-bottom: 100px;
     padding: 0;
 }
 #nav {
@@ -164,4 +164,47 @@ body{
 #overlay.active{
     opacity: 1;
     visibility: visible;
+}
+
+#sim-container{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    height: 600px;
+}
+canvas{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+#buttons{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+.sim-button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 10px;
+    border: none;
+}
+.sim-button.active{
+    opacity: 1;
+    background-color: #2b6cb0;
+    color: white;
+}
+#controls{
+    display: none;
+}
+#sim-canvas{
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #000;
 }
