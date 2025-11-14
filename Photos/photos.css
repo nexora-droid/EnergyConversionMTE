@@ -13,7 +13,6 @@ body{
     background-color: var(--bg-color);
     margin: 0;
     padding: 0;
-    margin-top: 50px;
 }
 #bulbimg{
     width: 150px;
