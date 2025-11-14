@@ -115,5 +115,10 @@ function drawOutput(){
             ctx.fill();
             ctx.globalAlpha = 1;
         }
+    } else if (mode == "thermal") {
+        ctx.fillStyle("orange");
+        ctx.beginPath();
+        ctx.ellipse(x, y, 30, 60, 0, 0, Math.PI * 2);
+        ctx.fil();
     }
 }
