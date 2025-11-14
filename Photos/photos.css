@@ -12,7 +12,7 @@ body{
     font-family: 'Noto Sans', sans-serif;
     background-color: var(--bg-color);
     padding: 0;
-    margin-top: 50px;
+    margin: 0;
 }
 #bulbimg{
     width: 150px;
@@ -22,7 +22,7 @@ body{
     object-position: 100% 50%;
 }
 #maincontainer{
-    padding: 10px;
+    padding: 80px 10px 10px 10px;
 }
 #nav {
     display: flex;
