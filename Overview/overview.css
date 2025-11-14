@@ -44,6 +44,11 @@ body{
     width: 100%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .nav-links {
@@ -261,6 +266,12 @@ button{
 .text{
     font-family: 'Noto Sans', sans-serif;
 }
+#tabletext{
+    font-size: 25px;
+    max-width: 350px;
+    text-align: justify;
+    margin-left: 50px;
+}
 @media (max-width:768px) {
     #intro{
         flex-direction: column;
@@ -284,12 +295,40 @@ button{
         padding: 3.5rem 1.5rem;
         box-sizing: border-box;
     }
+    #objectives {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #materials{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+@media (max-width: 1024px) {
+    #tabletext{
+        max-width: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
+        text-align: left !important;
+    }
+    table {
+        width: 100%;
+        margin: 0;
+    }
 }
 table{
     font-family: 'Noto Sans', sans-serif;
     border-collapse: collapse;
     width: 700px;
-    margin-left: 150px;
+    margin-left: 125px;
 }
 td, th{
     border: 0px;
@@ -328,19 +367,15 @@ tr:nth-child(odd){
   flex: 1;
   min-width: auto;
 }
-#tabletext{
-    font-size: 25px;
-    max-width: 350px;
-    text-align: justify;
-}
+
 #objectives{
     margin-top: 150px;
     display: flex !important;
-    flex-direction: row-reverse Imp !important;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 100px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 0 66px;
 }  
 #objectivestext{
@@ -351,6 +386,7 @@ tr:nth-child(odd){
     width: 100%;
     max-width: 770px;
     box-sizing: border-box;
+    flex: 1 ;
 }
 #objectivestext ul{
     text-align: left;
@@ -364,6 +400,7 @@ tr:nth-child(odd){
     border-radius: 100px;
     object-position: 100% 50%;
     rotate: 23.32deg;
+    flex: 0 0 auto;
 }
 
 #materials{
@@ -373,7 +410,7 @@ tr:nth-child(odd){
     align-items: center;
     justify-content: center;
     gap: 100px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 0 66px;
 }  
 #materialstext{
