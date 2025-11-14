@@ -120,5 +120,15 @@ function drawOutput(){
         ctx.beginPath();
         ctx.ellipse(x, y, 30, 60, 0, 0, Math.PI * 2);
         ctx.fil();
+    } else if (mode == "kinetic"){
+        ctx.save();
+        ctx.translate(x,y);
+        ctx.rotate(gearAngle);
+        ctx.fillStyle = "#ccc";
+        for (let i = 0; i < 4; i++){
+            ctx.rotate(Math.PI / 2);
+            ctx.fillRect(0, -10, 80, 20);
+        }
+        ctx.restore();
     }
 }
