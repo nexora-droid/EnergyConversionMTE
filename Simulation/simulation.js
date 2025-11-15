@@ -157,7 +157,7 @@ function drawOutput(){
 /*Mobile simulation switch to landscape or larger device checker*/
 function checkOrientation(){
     const overlay = document.getElementById('phoneoverlay');
-    if (window.innerWidth < 1024 && window.innerHeight > window.innerWidth){
+    if (window.innerWidth < 1500 && window.innerHeight > window.innerWidth){
         overlay.style.display = 'flex';
     } else {
         overlay.style.display = 'none';
