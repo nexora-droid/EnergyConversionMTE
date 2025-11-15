@@ -309,6 +309,20 @@ button{
         margin-left: 20px;
         margin-right: 20px;
     }
+    #mtehead {
+        font-size:  75px;
+    }
+    #intro, #objectives, #materials {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    #intro, #objectives, #materialstext{
+        margin-left: 0  !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+    }
 }
 @media (max-width: 1024px) {
     #tabletext{
