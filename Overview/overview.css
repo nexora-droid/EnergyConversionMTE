@@ -273,44 +273,87 @@ button{
     margin-left: 50px;
 }
 @media (max-width:768px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    #mainnav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    #hamburger{
+        display: flex !important;
+    }
+    .side-menu{
+        width: 100%;
+        padding: 3.5rem 1.5rem;
+    }
+    .side-menu, .nav-links{
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 3.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
     #intro, #objectives, #materials{
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        margin: 50px 0 15px 15px;
+        gap: 30px;
+        margin: 70px 15px 15px 15px;
         padding: 0;
     }
     #introtext, #objectivestext, #materialstext{
         max-width: 100%;
-        margin:  0;
+        width: 100%;
         padding: 0 10px;
+        margin: 0;
         text-align: left;
     }
-    #introtext h2, #objectivestext h2, #materialstext h2{
-        font-size: 28px;
+    #introtext h1, #objectivestext h2, #materialstext h2{
         text-align: center;
+        font-size: 28px;
         margin-bottom: 10px;
     }
     #introtext p, #objectivestext ul, #materialstext ul{
         font-size: 18px;
         line-height: 1.6;
-        padding: 0;
         max-width: 100%;
+        padding: 0;
     }
-    #tabletext, #infohead{
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+    table {
+        width: 100% !important;
+        max-width: 100%;
+        margin: 0;
+        font-size: 16px;
+    }
+    #tabletext, #infohead {
+        margin: 0 !important;
         padding: 0 10px !important;
         text-align: left !important;
     }
-    .side-menu, .nav-links{
-        margin-top: 3rem;
-        gap: 1rem;
-        padding-left: 0;
-        padding-right: 0;
+    #infosheet {
+        margin-top: 200px;
+        padding: 0 10px;
+    }
+
+    #container {
+        flex-direction: column;
+        gap: 20px;
     }
     #mtehead {
         font-size: 60px;
+        text-align: center;
+    }
+    #bulbimg, #targetimg, #materialimg, #gearimg{
+        width: 90%;
+        max-width: 368px;
+        margin: 0 auto 30px auto;
+        object-position: center;
+        rotate: 0deg;
     }
 }
 @media (max-width: 1024px) {
@@ -446,4 +489,10 @@ tr:nth-child(odd){
     border-radius: 100px;
     object-position: 100% 50%;
     rotate: 0deg;
+}
+
+.tablewrapper{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
