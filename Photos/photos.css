@@ -101,11 +101,11 @@ body{
     font-size: 32px;
     color: var(--text);
     z-index: 1001;
-}
+}   
 .side-menu{
     position: fixed;
     top: 0;
-    right: calc(-25% - 3rem);
+    right: -100%;
     height: 100vh;
     width: 25%;
     background-color: white;
